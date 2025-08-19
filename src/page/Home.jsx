@@ -163,9 +163,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import HomeImg1 from "../assets/Home/homeImg1.jpg";
-import HomeImg2 from "../assets/Home/HomeImg2.jpg";
-import HomeImg3 from "../assets/Home/HomeImg3.jpg";
-import HomeImg4 from "../assets/Home/HomeImg4.jpg";
+import HomeImg2 from "../assets/Home/homeImg2.jpg";
+import HomeImg3 from "../assets/Home/homeImg3.jpg";
+import HomeImg4 from "../assets/Home/homeImg4.jpg";
 
 const Home = () => {
   // Category images
