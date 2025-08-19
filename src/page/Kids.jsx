@@ -1,43 +1,48 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
+import TShirt from "../assets/kids/T-Shirt.jpg";
+import Hoodie from "../assets/kids/Hoodie.jpg";
+import jacketKet from "../assets/kids/jacketKet.jpg";
+import Shorts from "../assets/kids/Shorts.jpg";
+import Skirt from "../assets/kids/Skirt.jpg";
+import Shoes from "../assets/kids/Shoes.jpg";
 const products = [
   {
     id: 1,
     name: "Cartoon Print T-Shirt",
     price: "$25",
-    image: "https://via.placeholder.com/400x400",
+    image: TShirt,
   },
   {
     id: 2,
     name: "Colorful Hoodie",
     price: "$40",
-    image: "https://via.placeholder.com/400x400",
+    image: Hoodie,
   },
   {
     id: 3,
     name: "Kids Denim Jacket",
     price: "$55",
-    image: "https://via.placeholder.com/400x400",
+    image: jacketKet,
   },
   {
     id: 4,
     name: "Comfy Shorts",
     price: "$20",
-    image: "https://via.placeholder.com/400x400",
+    image: Shorts,
   },
   {
     id: 5,
     name: "Cute Skirt",
     price: "$30",
-    image: "https://via.placeholder.com/400x400",
+    image: Skirt,
   },
   {
     id: 6,
     name: "Sports Shoes",
     price: "$45",
-    image: "https://via.placeholder.com/400x400",
+    image: Shoes,
   },
 ];
 
