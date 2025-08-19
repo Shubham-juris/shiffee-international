@@ -1,43 +1,48 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
+import jinss from "../assets/Man/jinss.jpg";
+import Jacket from "../assets/Man/Jacket.jpg";
+import shirt from "../assets/Man/shirt.jpg";
+import FormalSuit from "../assets/Man/FormalSuit.jpg";
+import sneakers from "../assets/Man/sneakers.jpg";
+import hodies from "../assets/Man/hodies.jpg";
 const products = [
   {
     id: 1,
     name: "Classic Leather Jacket",
     price: "$180",
-    image: "https://via.placeholder.com/400x400",
+    image: Jacket,
   },
   {
     id: 2,
     name: "Casual Shirt",
     price: "$60",
-    image: "https://via.placeholder.com/400x400",
+    image: shirt,
   },
   {
     id: 3,
     name: "Formal Suit",
     price: "$220",
-    image: "https://via.placeholder.com/400x400",
+    image: FormalSuit,
   },
   {
     id: 4,
     name: "Denim Jeans",
     price: "$90",
-    image: "https://via.placeholder.com/400x400",
+    image: jinss,
   },
   {
     id: 5,
     name: "Sports Shoes",
     price: "$120",
-    image: "https://via.placeholder.com/400x400",
+    image: sneakers,
   },
   {
     id: 6,
     name: "Hoodie",
     price: "$70",
-    image: "https://via.placeholder.com/400x400",
+    image: hodies,
   },
 ];
 

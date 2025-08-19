@@ -1,43 +1,49 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import ElegarntEveningGown from "../assets/woman/ElegantEveningGown.jpg";
+import SummerFloralDress from "../assets/woman/Summer Floral Dress.jpg";
+import Tops from "../assets/woman/TopGirls.jpg";
+import Handbag from "../assets/woman/Handbag.jpg";
+import Heels from "../assets/woman/Heels.jpg";
+import Saree from "../assets/woman/Saree.jpg";
 
 const products = [
   {
     id: 1,
     name: "Elegant Evening Gown",
     price: "$250",
-    image: "https://via.placeholder.com/400x400",
+    image: ElegarntEveningGown,
   },
   {
     id: 2,
     name: "Summer Floral Dress",
     price: "$120",
-    image: "https://via.placeholder.com/400x400",
+    image: SummerFloralDress,
   },
   {
     id: 3,
     name: "Casual Tops",
     price: "$60",
-    image: "https://via.placeholder.com/400x400",
+    image: Tops,
   },
   {
     id: 4,
     name: "Designer Handbag",
     price: "$180",
-    image: "https://via.placeholder.com/400x400",
+    image: Handbag,
   },
   {
     id: 5,
     name: "High Heels",
     price: "$90",
-    image: "https://via.placeholder.com/400x400",
+    image: Heels,
   },
   {
     id: 6,
     name: "Stylish Saree",
     price: "$140",
-    image: "https://via.placeholder.com/400x400",
+    image: Saree,
   },
 ];
 
