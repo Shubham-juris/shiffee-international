@@ -72,7 +72,7 @@ const Accessories = () => {
       </motion.div>
 
       {/* Category Filters */}
-      <div className="flex justify-center gap-4 mt-10 mb-8 flex-wrap">
+      {/* <div className="flex justify-center gap-4 mt-10 mb-8 flex-wrap">
         {["All", "Bags", "Belts", "Sunglasses", "Jewellery", "Hats"].map(
           (category) => (
             <button
@@ -83,11 +83,11 @@ const Accessories = () => {
             </button>
           )
         )}
-      </div>
+      </div> */}
 
       {/* Product Grid */}
       <div className="max-w-6xl mx-auto px-6 pb-16">
-        <h2 className="text-3xl font-bold text-center mb-10">
+        <h2 className="text-3xl font-bold text-center mb-10 py-5">
           👜 Latest Accessories
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -105,12 +105,12 @@ const Accessories = () => {
               <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold">{item.name}</h3>
                 <p className="text-xl font-bold text-green-600">{item.price}</p>
-                <button
+                {/* <button
                   className="mt-3 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition"
                   onClick={() => navigate("/cart")}
                 >
                   Add to Cart
-                </button>
+                </button> */}
               </div>
             </motion.div>
           ))}
@@ -133,7 +133,7 @@ const Accessories = () => {
           </p>
           <button
             className="px-6 py-3 bg-black text-white font-semibold rounded-lg shadow-md hover:bg-gray-800 transition"
-            onClick={() => navigate("/cart")}
+            onClick={() => navigate("/new")}
           >
             Shop Now
           </button>

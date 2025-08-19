@@ -130,9 +130,9 @@ const NewArrivals = () => {
                 <h3 className="text-lg font-semibold">{product.name}</h3>
                 <p className="text-gray-500 text-sm">{product.category}</p>
                 <p className="text-xl font-bold mt-2">{product.price}</p>
-                <button className="mt-4 w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition">
+                {/* <button className="mt-4 w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition">
                   Add to Cart
-                </button>
+                </button> */}
               </div>
             </motion.div>
           ))}

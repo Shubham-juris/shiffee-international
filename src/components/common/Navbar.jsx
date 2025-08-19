@@ -48,7 +48,7 @@ const Navbar = () => {
         {/* Right: Icons */}
         <div className="flex items-center space-x-4">
           {/* Cart Icon */}
-          <div
+          {/* <div
             className="relative cursor-pointer"
             onClick={() => navigate("/cart")}
           >
@@ -56,7 +56,7 @@ const Navbar = () => {
             <span className="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full px-1">
               2
             </span>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>

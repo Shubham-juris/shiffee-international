@@ -1,7 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/contact");
+  };
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
@@ -96,46 +101,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Our Team */}
-      <div className="max-w-6xl mx-auto py-16 px-6">
-        <h2 className="text-4xl font-bold text-center mb-12">Meet Our Team</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {[
-            {
-              name: "Roshan Singh",
-              role: "Founder & CEO",
-              img: "https://via.placeholder.com/400x400",
-            },
-            {
-              name: "Priya Sharma",
-              role: "Head of Design",
-              img: "https://via.placeholder.com/400x400",
-            },
-            {
-              name: "Amit Verma",
-              role: "Marketing Director",
-              img: "https://via.placeholder.com/400x400",
-            },
-          ].map((member, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
-              whileHover={{ scale: 1.05 }}
-            >
-              <img
-                src={member.img}
-                alt={member.name}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-bold">{member.name}</h3>
-                <p className="text-gray-600">{member.role}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
       {/* Closing Section */}
       <motion.div
         className="bg-gradient-to-r from-gray-800 to-gray-600 text-white text-center py-14 px-6"
@@ -147,7 +112,10 @@ const About = () => {
         <p className="text-lg mb-6">
           Together, let’s create fashion that inspires the world.
         </p>
-        <button className="px-6 py-3 bg-white text-gray-800 font-semibold rounded-lg shadow hover:bg-gray-200 transition">
+        <button
+          onClick={handleClick}
+          className="px-6 py-3 bg-white text-gray-800 font-semibold rounded-lg shadow hover:bg-gray-200 transition"
+        >
           Contact Us
         </button>
       </motion.div>

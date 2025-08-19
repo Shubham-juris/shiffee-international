@@ -121,12 +121,12 @@ const Sale = () => {
                 <p className="text-xl font-bold text-red-600">
                   {product.salePrice}
                 </p>
-                <button
+                {/* <button
                   className="mt-3 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
                   onClick={() => navigate("/cart")}
                 >
                   Add to Cart
-                </button>
+                </button> */}
               </div>
             </motion.div>
           ))}

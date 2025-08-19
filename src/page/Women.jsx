@@ -73,7 +73,7 @@ const Women = () => {
       </motion.div>
 
       {/* Filter Buttons */}
-      <div className="flex justify-center gap-4 mt-10 mb-8">
+      {/* <div className="flex justify-center gap-4 mt-10 mb-8">
         {["All", "Dresses", "Tops", "Handbags", "Shoes", "Sarees"].map(
           (category) => (
             <button
@@ -84,11 +84,11 @@ const Women = () => {
             </button>
           )
         )}
-      </div>
+      </div> */}
 
       {/* Product Grid */}
       <div className="max-w-6xl mx-auto px-6 pb-16">
-        <h2 className="text-3xl font-bold text-center mb-10">
+        <h2 className="text-3xl font-bold text-center mb-10 py-5">
           💃 Trending Styles
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -108,12 +108,12 @@ const Women = () => {
                 <p className="text-xl font-bold text-pink-600">
                   {product.price}
                 </p>
-                <button
+                {/* <button
                   className="mt-3 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
                   onClick={() => navigate("/cart")}
                 >
                   Add to Cart
-                </button>
+                </button> */}
               </div>
             </motion.div>
           ))}
@@ -134,7 +134,7 @@ const Women = () => {
           </p>
           <button
             className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition"
-            onClick={() => navigate("/cart")}
+            onClick={() => navigate("/new")}
           >
             Grab the Deal
           </button>
