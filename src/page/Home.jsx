@@ -251,8 +251,8 @@ const Home = () => {
                 alt={cat}
                 className="h-full w-full object-cover transform group-hover:scale-110 transition duration-500"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                <span className="text-xl font-bold text-white tracking-wide">
+              <div className="absolute inset-0 bg-yellow-400 bg-opacity-40 flex items-center justify-center">
+                <span className="text-xl font-bold text-black tracking-wide">
                   {cat}
                 </span>
               </div>
@@ -284,9 +284,9 @@ const Home = () => {
                 <div className="p-4">
                   <h3 className="font-semibold text-lg">{product.name}</h3>
                   <p className="text-gray-500">₹{product.price}</p>
-                  <button className="mt-3 w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition">
+                  {/* <button className="mt-3 w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition">
                     Add to Cart
-                  </button>
+                  </button> */}
                 </div>
               </motion.div>
             ))}
