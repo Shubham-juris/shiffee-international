@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import ElegarntEveningGown from "../assets/woman/ElegantEveningGown.jpg";
 import SummerFloralDress from "../assets/woman/Summer Floral Dress.jpg";
-import Tops from "../assets/woman/TopGirls.jpg";
+import Tops from "../assets/woman/topGirls.jpg";
 import Handbag from "../assets/woman/Handbag.jpg";
 import Heels from "../assets/woman/Heels.jpg";
 import Saree from "../assets/woman/Saree.jpg";
