@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import TShirt from "../assets/kids/T-Shirt.jpg";
 import Hoodie from "../assets/kids/Hoodie.jpg";
-import jacketKet from "../assets/kids/jacketKet.jpg";
+import jacketKet from "../assets/kids/JacketKet.jpg";
 import Shorts from "../assets/kids/Shorts.jpg";
 import Skirt from "../assets/kids/Skirt.jpg";
 import Shoes from "../assets/kids/Shoes.jpg";
