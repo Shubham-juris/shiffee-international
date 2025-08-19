@@ -1,40 +1,44 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
+import MenClassicJacket from "../assets/newArraivals/MenClassicJacket.jpg";
+import WomenSummerDress from "../assets/newArraivals/WomenSummerDress.jpg";
+import CasualSneakers from "../assets/newArraivals/CasualSneakers.jpg";
+import KidsHoodie from "../assets/newArraivals/KidsHoodie.jpg";
+import LeatherHandbag from "../assets/newArraivals/LeatherHandbag.jpg";
 const products = [
   {
     id: 1,
     name: "Men's Classic Jacket",
     price: "$120",
-    image: "https://via.placeholder.com/400x500.png?text=Jacket",
+    image: MenClassicJacket,
     category: "Men",
   },
   {
     id: 2,
     name: "Women's Summer Dress",
     price: "$90",
-    image: "https://via.placeholder.com/400x500.png?text=Dress",
+    image: WomenSummerDress,
     category: "Women",
   },
   {
     id: 3,
     name: "Casual Sneakers",
     price: "$70",
-    image: "https://via.placeholder.com/400x500.png?text=Sneakers",
+    image: CasualSneakers,
     category: "Unisex",
   },
   {
     id: 4,
     name: "Kids Hoodie",
     price: "$50",
-    image: "https://via.placeholder.com/400x500.png?text=Kids+Hoodie",
+    image: KidsHoodie,
     category: "Kids",
   },
   {
     id: 5,
     name: "Leather Handbag",
     price: "$150",
-    image: "https://via.placeholder.com/400x500.png?text=Handbag",
+    image: LeatherHandbag,
     category: "Accessories",
   },
 ];
