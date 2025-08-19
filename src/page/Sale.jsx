@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import kids from "../assets/sale/kids.jpg";
+import Leather from "../assets/sale/Leather.jpg";
+import Casual from "../assets/sale/Casual.jpg";
+import Summer from "../assets/sale/Summer.jpg";
 
 const products = [
   {
@@ -8,28 +12,28 @@ const products = [
     name: "Men's Leather Jacket",
     price: "$150",
     salePrice: "$99",
-    image: "https://via.placeholder.com/400x400",
+    image: Leather,
   },
   {
     id: 2,
     name: "Women's Summer Dress",
     price: "$90",
     salePrice: "$59",
-    image: "https://via.placeholder.com/400x400",
+    image: Summer,
   },
   {
     id: 3,
     name: "Casual Sneakers",
     price: "$120",
     salePrice: "$79",
-    image: "https://via.placeholder.com/400x400",
+    image: Casual,
   },
   {
     id: 4,
     name: "Kids Hoodie",
     price: "$60",
     salePrice: "$39",
-    image: "https://via.placeholder.com/400x400",
+    image: kids,
   },
 ];
 
