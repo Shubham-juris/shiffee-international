@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import jinss from "../assets/Man/jinss.jpg";
 import Jacket from "../assets/Man/Jacket.jpg";
-import shirt from "../assets/Man/shirt.jpg";
+import shirt from "../assets/Man/Shirt.jpg";
 import FormalSuit from "../assets/Man/FormalSuit.jpg";
 import sneakers from "../assets/Man/sneakers.jpg";
 import hodies from "../assets/Man/hodies.jpg";
