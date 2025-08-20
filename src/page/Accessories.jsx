@@ -7,8 +7,6 @@ import Hat from "../assets/accessories/Hat.jpg";
 import Watch from "../assets/accessories/Watch.jpg";
 import Belt from "../assets/accessories/Belt.jpg";
 import Sunglasses from "../assets/accessories/Sunglasses.jpg";
-
-// 👇 Currency imports
 import { formatPrice } from "../utils/currency";
 import { CurrencyContext } from "../context/CurrencyContext";
 
@@ -16,7 +14,7 @@ const accessories = [
   {
     id: 1,
     name: "Classic Sunglasses",
-    price: 35, // number only
+    price: 35, 
     image: Sunglasses,
   },
   {
@@ -53,7 +51,7 @@ const accessories = [
 
 const Accessories = () => {
   const navigate = useNavigate();
-  const { currency } = useContext(CurrencyContext); // 👈 Get selected currency
+  const { currency } = useContext(CurrencyContext);
 
   return (
     <div className="bg-green-50 min-h-screen">

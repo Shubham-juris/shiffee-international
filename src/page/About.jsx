@@ -7,6 +7,7 @@ const About = () => {
   const handleClick = () => {
     navigate("/contact");
   };
+  
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}

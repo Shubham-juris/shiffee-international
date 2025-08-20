@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { formatPrice } from "../utils/currency"; // helper function
+import { formatPrice } from "../utils/currency"; 
 
 import TShirt from "../assets/kids/T-Shirt.jpg";
 import Hoodie from "../assets/kids/Hoodie.jpg";
@@ -22,7 +22,7 @@ const products = [
 
 const Kids = () => {
   const navigate = useNavigate();
-  const { currency } = useContext(CurrencyContext); // ✅ currency context use
+  const { currency } = useContext(CurrencyContext); 
 
   return (
     <div className="bg-yellow-50 min-h-screen">

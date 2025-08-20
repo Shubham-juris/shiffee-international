@@ -5,12 +5,9 @@ import kids from "../assets/sale/kids.jpg";
 import Leather from "../assets/sale/Leather.jpg";
 import Casual from "../assets/sale/Casual.jpg";
 import Summer from "../assets/sale/Summer.jpg";
-
-// import { CurrencyContext } from "../components/CurrencyContext";
 import { formatPrice } from "../utils/currency"; // helper function
 import { CurrencyContext } from "../context/CurrencyContext";
 
-// Prices ko number me rakha (without $ sign)
 const products = [
   {
     id: 1,
@@ -44,7 +41,7 @@ const products = [
 
 const Sale = () => {
   const navigate = useNavigate();
-  const { currency } = useContext(CurrencyContext); // context se currency le rahe
+  const { currency } = useContext(CurrencyContext); 
 
   return (
     <div className="bg-red-50 min-h-screen">
@@ -63,7 +60,7 @@ const Sale = () => {
         <motion.button
           whileHover={{ scale: 1.1 }}
           className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition"
-          onClick={() => navigate("/new-arrivals")}
+          onClick={() => navigate("/new")}
         >
           Shop Now
         </motion.button>

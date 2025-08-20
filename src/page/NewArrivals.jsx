@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { motion } from "framer-motion";
 import { CurrencyContext } from "../context/CurrencyContext";
 import { formatPrice } from "../utils/currency";
-
 import MenClassicJacket from "../assets/newArraivals/MenClassicJacket.jpg";
 import WomenSummerDress from "../assets/newArraivals/WomenSummerDress.jpg";
 import CasualSneakers from "../assets/newArraivals/CasualSneakers.jpg";

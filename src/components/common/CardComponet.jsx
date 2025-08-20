@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const CardComponet = () => {
-  // Example data (baad me Context ya Redux se aayega)
   const cartItems = [
     {
       id: 1,
