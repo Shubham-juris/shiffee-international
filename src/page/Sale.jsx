@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import kids from "../assets/sale/kids.jpg";
@@ -6,39 +6,45 @@ import Leather from "../assets/sale/Leather.jpg";
 import Casual from "../assets/sale/Casual.jpg";
 import Summer from "../assets/sale/Summer.jpg";
 
+// import { CurrencyContext } from "../components/CurrencyContext";
+import { formatPrice } from "../utils/currency"; // helper function
+import { CurrencyContext } from "../context/CurrencyContext";
+
+// Prices ko number me rakha (without $ sign)
 const products = [
   {
     id: 1,
     name: "Men's Leather Jacket",
-    price: "$150",
-    salePrice: "$99",
+    price: 150,
+    salePrice: 99,
     image: Leather,
   },
   {
     id: 2,
     name: "Women's Summer Dress",
-    price: "$90",
-    salePrice: "$59",
+    price: 90,
+    salePrice: 59,
     image: Summer,
   },
   {
     id: 3,
     name: "Casual Sneakers",
-    price: "$120",
-    salePrice: "$79",
+    price: 120,
+    salePrice: 79,
     image: Casual,
   },
   {
     id: 4,
     name: "Kids Hoodie",
-    price: "$60",
-    salePrice: "$39",
+    price: 60,
+    salePrice: 39,
     image: kids,
   },
 ];
 
 const Sale = () => {
   const navigate = useNavigate();
+  const { currency } = useContext(CurrencyContext); // context se currency le rahe
 
   return (
     <div className="bg-red-50 min-h-screen">
@@ -117,16 +123,12 @@ const Sale = () => {
               />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold">{product.name}</h3>
-                <p className="text-gray-500 line-through">{product.price}</p>
-                <p className="text-xl font-bold text-red-600">
-                  {product.salePrice}
+                <p className="text-gray-500 line-through">
+                  {formatPrice(product.price, currency)}
                 </p>
-                {/* <button
-                  className="mt-3 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
-                  onClick={() => navigate("/cart")}
-                >
-                  Add to Cart
-                </button> */}
+                <p className="text-xl font-bold text-red-600">
+                  {formatPrice(product.salePrice, currency)}
+                </p>
               </div>
             </motion.div>
           ))}

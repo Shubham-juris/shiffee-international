@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Necklace from "../assets/accessories/Necklace.jpg";
@@ -7,47 +7,53 @@ import Hat from "../assets/accessories/Hat.jpg";
 import Watch from "../assets/accessories/Watch.jpg";
 import Belt from "../assets/accessories/Belt.jpg";
 import Sunglasses from "../assets/accessories/Sunglasses.jpg";
+
+// 👇 Currency imports
+import { formatPrice } from "../utils/currency";
+import { CurrencyContext } from "../context/CurrencyContext";
+
 const accessories = [
   {
     id: 1,
     name: "Classic Sunglasses",
-    price: "$35",
+    price: 35, // number only
     image: Sunglasses,
   },
   {
     id: 2,
     name: "Leather Belt",
-    price: "$45",
+    price: 45,
     image: Belt,
   },
   {
     id: 3,
     name: "Wrist Watch",
-    price: "$120",
+    price: 120,
     image: Watch,
   },
   {
     id: 4,
     name: "Stylish Hat",
-    price: "$30",
+    price: 30,
     image: Hat,
   },
   {
     id: 5,
     name: "Handbag",
-    price: "$75",
+    price: 75,
     image: HandbagMan,
   },
   {
     id: 6,
     name: "Necklace",
-    price: "$55",
+    price: 55,
     image: Necklace,
   },
 ];
 
 const Accessories = () => {
   const navigate = useNavigate();
+  const { currency } = useContext(CurrencyContext); // 👈 Get selected currency
 
   return (
     <div className="bg-green-50 min-h-screen">
@@ -71,20 +77,6 @@ const Accessories = () => {
         </motion.button>
       </motion.div>
 
-      {/* Category Filters */}
-      {/* <div className="flex justify-center gap-4 mt-10 mb-8 flex-wrap">
-        {["All", "Bags", "Belts", "Sunglasses", "Jewellery", "Hats"].map(
-          (category) => (
-            <button
-              key={category}
-              className="px-5 py-2 bg-white rounded-full shadow hover:bg-green-100 transition"
-            >
-              {category}
-            </button>
-          )
-        )}
-      </div> */}
-
       {/* Product Grid */}
       <div className="max-w-6xl mx-auto px-6 pb-16">
         <h2 className="text-3xl font-bold text-center mb-10 py-5">
@@ -104,13 +96,10 @@ const Accessories = () => {
               />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold">{item.name}</h3>
-                <p className="text-xl font-bold text-green-600">{item.price}</p>
-                {/* <button
-                  className="mt-3 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition"
-                  onClick={() => navigate("/cart")}
-                >
-                  Add to Cart
-                </button> */}
+                {/* 👇 Dynamic currency format */}
+                <p className="text-xl font-bold text-green-600">
+                  {formatPrice(item.price, currency)}
+                </p>
               </div>
             </motion.div>
           ))}

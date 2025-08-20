@@ -1,53 +1,58 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { CurrencyContext } from "../context/CurrencyContext";
+import { formatPrice } from "../utils/currency";
+
 import jinss from "../assets/Man/jinss.jpg";
 import Jacket from "../assets/Man/Jacket.jpg";
 import shirt from "../assets/Man/Shirt.jpg";
 import FormalSuit from "../assets/Man/FormalSuit.jpg";
 import sneakers from "../assets/Man/sneakers.jpg";
 import hodies from "../assets/Man/hodies.jpg";
+
 const products = [
   {
     id: 1,
     name: "Classic Leather Jacket",
-    price: "$180",
+    price: 180,
     image: Jacket,
   },
   {
     id: 2,
     name: "Casual Shirt",
-    price: "$60",
+    price: 60,
     image: shirt,
   },
   {
     id: 3,
     name: "Formal Suit",
-    price: "$220",
+    price: 220,
     image: FormalSuit,
   },
   {
     id: 4,
     name: "Denim Jeans",
-    price: "$90",
+    price: 90,
     image: jinss,
   },
   {
     id: 5,
     name: "Sports Shoes",
-    price: "$120",
+    price: 120,
     image: sneakers,
   },
   {
     id: 6,
     name: "Hoodie",
-    price: "$70",
+    price: 70,
     image: hodies,
   },
 ];
 
 const Men = () => {
   const navigate = useNavigate();
+  const { currency } = useContext(CurrencyContext);
 
   return (
     <div className="bg-blue-50 min-h-screen">
@@ -71,20 +76,6 @@ const Men = () => {
         </motion.button>
       </motion.div>
 
-      {/* Filter Buttons */}
-      {/* <div className="flex justify-center gap-4 mt-10 mb-8">
-        {["All", "Jackets", "Shirts", "Suits", "Jeans", "Shoes"].map(
-          (category) => (
-            <button
-              key={category}
-              className="px-5 py-2 bg-white rounded-full shadow hover:bg-blue-100 transition"
-            >
-              {category}
-            </button>
-          )
-        )}
-      </div> */}
-
       {/* Product Grid */}
       <div className="max-w-6xl mx-auto px-6 pb-16">
         <h2 className="text-3xl font-bold text-center mb-10 py-5">
@@ -105,14 +96,8 @@ const Men = () => {
               <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold">{product.name}</h3>
                 <p className="text-xl font-bold text-blue-600">
-                  {product.price}
+                  {formatPrice(product.price, currency)}
                 </p>
-                {/* <button
-                  className="mt-3 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
-                  onClick={() => navigate("/cart")}
-                >
-                  Add to Cart
-                </button> */}
               </div>
             </motion.div>
           ))}

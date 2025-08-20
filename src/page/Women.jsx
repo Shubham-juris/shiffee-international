@@ -1,54 +1,59 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+
+import { formatPrice } from "../utils/currency"; // Utility function import
+
 import ElegarntEveningGown from "../assets/woman/ElegantEveningGown.jpg";
 import SummerFloralDress from "../assets/woman/Summer Floral Dress.jpg";
 import Tops from "../assets/woman/topGirls.jpg";
 import Handbag from "../assets/woman/Handbag.jpg";
 import Heels from "../assets/woman/Heels.jpg";
 import Saree from "../assets/woman/Saree.jpg";
+import { CurrencyContext } from "../context/CurrencyContext";
 
 const products = [
   {
     id: 1,
     name: "Elegant Evening Gown",
-    price: "$250",
+    price: 250,
     image: ElegarntEveningGown,
   },
   {
     id: 2,
     name: "Summer Floral Dress",
-    price: "$120",
+    price: 120,
     image: SummerFloralDress,
   },
   {
     id: 3,
     name: "Casual Tops",
-    price: "$60",
+    price: 60,
     image: Tops,
   },
   {
     id: 4,
     name: "Designer Handbag",
-    price: "$180",
+    price: 180,
     image: Handbag,
   },
   {
     id: 5,
     name: "High Heels",
-    price: "$90",
+    price: 90,
     image: Heels,
   },
   {
     id: 6,
     name: "Stylish Saree",
-    price: "$140",
+    price: 140,
     image: Saree,
   },
 ];
 
 const Women = () => {
   const navigate = useNavigate();
+  const { currency } = useContext(CurrencyContext); // Currency value le liya
 
   return (
     <div className="bg-pink-50 min-h-screen">
@@ -72,20 +77,6 @@ const Women = () => {
         </motion.button>
       </motion.div>
 
-      {/* Filter Buttons */}
-      {/* <div className="flex justify-center gap-4 mt-10 mb-8">
-        {["All", "Dresses", "Tops", "Handbags", "Shoes", "Sarees"].map(
-          (category) => (
-            <button
-              key={category}
-              className="px-5 py-2 bg-white rounded-full shadow hover:bg-pink-100 transition"
-            >
-              {category}
-            </button>
-          )
-        )}
-      </div> */}
-
       {/* Product Grid */}
       <div className="max-w-6xl mx-auto px-6 pb-16">
         <h2 className="text-3xl font-bold text-center mb-10 py-5">
@@ -106,14 +97,9 @@ const Women = () => {
               <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold">{product.name}</h3>
                 <p className="text-xl font-bold text-pink-600">
-                  {product.price}
+                  {formatPrice(product.price, currency)}{" "}
+                  {/* Currency Dynamic */}
                 </p>
-                {/* <button
-                  className="mt-3 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
-                  onClick={() => navigate("/cart")}
-                >
-                  Add to Cart
-                </button> */}
               </div>
             </motion.div>
           ))}

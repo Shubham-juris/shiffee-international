@@ -1,59 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { motion } from "framer-motion";
+import { CurrencyContext } from "../context/CurrencyContext";
+import { formatPrice } from "../utils/currency";
+
 import MenClassicJacket from "../assets/newArraivals/MenClassicJacket.jpg";
 import WomenSummerDress from "../assets/newArraivals/WomenSummerDress.jpg";
 import CasualSneakers from "../assets/newArraivals/CasualSneakers.jpg";
 import KidsHoodie from "../assets/newArraivals/KidsHoodie.jpg";
 import LeatherHandbag from "../assets/newArraivals/LeatherHandbag.jpg";
+
+// ✅ Prices stored in INR (base)
 const products = [
-  {
-    id: 1,
-    name: "Men's Classic Jacket",
-    price: "$120",
-    image: MenClassicJacket,
-    category: "Men",
-  },
-  {
-    id: 2,
-    name: "Women's Summer Dress",
-    price: "$90",
-    image: WomenSummerDress,
-    category: "Women",
-  },
-  {
-    id: 3,
-    name: "Casual Sneakers",
-    price: "$70",
-    image: CasualSneakers,
-    category: "Unisex",
-  },
-  {
-    id: 4,
-    name: "Kids Hoodie",
-    price: "$50",
-    image: KidsHoodie,
-    category: "Kids",
-  },
-  {
-    id: 5,
-    name: "Leather Handbag",
-    price: "$150",
-    image: LeatherHandbag,
-    category: "Accessories",
-  },
+  { id: 1, name: "Men's Classic Jacket", price: 7999,  image: MenClassicJacket, category: "Men" },
+  { id: 2, name: "Women's Summer Dress", price: 3499,  image: WomenSummerDress, category: "Women" },
+  { id: 3, name: "Casual Sneakers",      price: 5799,  image: CasualSneakers, category: "Unisex" },
+  { id: 4, name: "Kids Hoodie",          price: 1999,  image: KidsHoodie, category: "Kids" },
+  { id: 5, name: "Leather Handbag",      price: 8999,  image: LeatherHandbag, category: "Accessories" },
 ];
 
 const NewArrivals = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const { currency } = useContext(CurrencyContext);
 
   const filteredProducts =
-    selectedCategory === "All"
-      ? products
-      : products.filter((p) => p.category === selectedCategory);
+    selectedCategory === "All" ? products : products.filter((p) => p.category === selectedCategory);
 
   return (
     <div className="bg-gray-50">
-      {/* 🔹 Hero Section */}
+      {/* Hero */}
       <section className="relative bg-gradient-to-r from-black to-gray-800 text-white py-24 text-center">
         <motion.h1
           className="text-5xl font-extrabold mb-4"
@@ -73,7 +47,7 @@ const NewArrivals = () => {
         </motion.p>
       </section>
 
-      {/* 🔹 Filters */}
+      {/* Filters */}
       <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           {["All", "Men", "Women", "Kids", "Accessories"].map((filter, i) => (
@@ -93,27 +67,20 @@ const NewArrivals = () => {
           ))}
         </div>
 
-        {/* 🔹 Product Grid */}
+        {/* Grid */}
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
           initial="hidden"
           animate="visible"
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.2 } },
-          }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }}
         >
           {filteredProducts.map((product) => (
             <motion.div
               key={product.id}
               className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition"
               whileHover={{ scale: 1.05 }}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
             >
-              {/* Product Image */}
               <div className="relative overflow-hidden">
                 <img
                   src={product.image}
@@ -125,14 +92,12 @@ const NewArrivals = () => {
                 </span>
               </div>
 
-              {/* Product Info */}
               <div className="p-5">
                 <h3 className="text-lg font-semibold">{product.name}</h3>
                 <p className="text-gray-500 text-sm">{product.category}</p>
-                <p className="text-xl font-bold mt-2">{product.price}</p>
-                {/* <button className="mt-4 w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition">
-                  Add to Cart
-                </button> */}
+                <p className="text-xl font-bold mt-2">
+                  {formatPrice(product.price, currency)}
+                </p>
               </div>
             </motion.div>
           ))}

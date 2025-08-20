@@ -10,6 +10,7 @@ import Kids from "../page/Kids";
 import Accessories from "../page/Accessories";
 import CardComponet from "../components/common/CardComponet";
 import { ScrollToTop } from "../components/ScroolToTop";
+
 const AppRoute = () => {
   return (
     <>
