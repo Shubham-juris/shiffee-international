@@ -9,7 +9,7 @@ const HeroSection = () => {
         transition={{ duration: 0.6 }}
       >
         <h1 className="text-5xl font-extrabold mb-4">
-          About Shiffeice International
+          About shiffee International
         </h1>
         <p className="text-lg max-w-2xl mx-auto">
           Redefining fashion with innovation, quality, and global trends 🌍

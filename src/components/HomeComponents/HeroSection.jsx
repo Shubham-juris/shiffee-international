@@ -13,7 +13,7 @@ const HeroSection = () => {
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
             Welcome to{" "}
-            <span className="text-yellow-400">Shiffeice International</span>
+            <span className="text-yellow-400">shiffee International</span>
           </h1>
           <p className="mt-4 text-lg text-gray-300 max-w-lg">
             Discover the latest fashion trends for Men, Women, and Kids.

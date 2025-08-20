@@ -9,10 +9,10 @@ const Footer = () => {
         {/* Brand / About */}
         <div>
           <h2 className="text-2xl font-bold text-white">
-            Shiffeice International
+            shiffee International
           </h2>
           <p className="mt-3 text-sm">
-            Trending fashion, timeless style. Shiffeice International brings you
+            Trending fashion, timeless style.shiffee International brings you
             the best in clothing and accessories for Men, Women & Kids.
           </p>
         </div>
@@ -111,8 +111,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="border-t border-gray-700 py-4 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Shiffeice International. All rights
-        reserved.
+        © {new Date().getFullYear()} shiffee International. All rights reserved.
       </div>
     </footer>
   );
