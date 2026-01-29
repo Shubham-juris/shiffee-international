@@ -10,44 +10,63 @@ import shirt from "../assets/Man/Shirt.jpg";
 import FormalSuit from "../assets/Man/FormalSuit.jpg";
 import sneakers from "../assets/Man/sneakers.jpg";
 import hodies from "../assets/Man/hodies.jpg";
-
+import bomberJacket from "../assets/Man/image16.jpg";
+import poloTshirt from "../assets/Man/image15.jpg";
+import chinos from "../assets/Man/image14.jpg";
+import runningShorts from "../assets/Man/image10.jpg";
+import denimShirt from "../assets/Man/image13.jpg";
+import trenchCoat from "../assets/Man/image12.jpg";
+import sweatshirt from "../assets/Man/image11.jpg";
+import cargoPants from "../assets/Man/image9.jpg";
+import tankTop from "../assets/Man/image8.jpg";
+import blazer from "../assets/Man/image7.jpg";
 const products = [
   {
     id: 1,
     name: "Classic Leather Jacket",
-    price: 180,
+    price: 550,
     image: Jacket,
   },
   {
     id: 2,
     name: "Casual Shirt",
-    price: 60,
+    price: 360,
     image: shirt,
   },
   {
     id: 3,
     name: "Formal Suit",
-    price: 220,
+    price: 2520,
     image: FormalSuit,
   },
   {
     id: 4,
     name: "Denim Jeans",
-    price: 90,
+    price: 799,
     image: jinss,
   },
   {
     id: 5,
     name: "Sports Shoes",
-    price: 120,
+    price: 1100,
     image: sneakers,
   },
   {
     id: 6,
     name: "Hoodie",
-    price: 70,
+    price: 870,
     image: hodies,
   },
+  { id: 7, name: "Bomber Jacket", price: 550, image: bomberJacket },
+  { id: 8, name: "Polo T-Shirt", price: 250, image: poloTshirt },
+  { id: 9, name: "Chinos Pants", price: 800, image: chinos },
+  { id: 10, name: "Denim Shirt", price: 600, image: denimShirt },
+  { id: 11, name: "Sweatshirt", price: 400, image: runningShorts },
+  { id: 12, name: "Running Shorts ", price: 750, image: trenchCoat },
+  { id: 13, name: "Trench Coat", price: 3000, image: sweatshirt },
+  { id: 14, name: "Cargo Pants", price: 900, image: cargoPants },
+  { id: 15, name: "Tank Top", price: 200, image: tankTop },
+  { id: 16, name: "Blazer", price: 1200, image: blazer },
 ];
 
 const Men = () => {
