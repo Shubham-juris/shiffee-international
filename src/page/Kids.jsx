@@ -12,12 +12,46 @@ import Shoes from "../assets/kids/Shoes.jpg";
 import { CurrencyContext } from "../context/CurrencyContext";
 
 const products = [
-  { id: 1, name: "Cartoon Print T-Shirt", price: 25, image: TShirt },
-  { id: 2, name: "Colorful Hoodie", price: 40, image: Hoodie },
-  { id: 3, name: "Kids Denim Jacket", price: 55, image: JacketKet },
-  { id: 4, name: "Comfy Shorts", price: 20, image: Shorts },
-  { id: 5, name: "Cute Skirt", price: 30, image: Skirt },
-  { id: 6, name: "Sports Shoes", price: 45, image: Shoes },
+  { id: 1, name: "Cartoon Print T-Shirt", price: 225, image: TShirt },
+  { id: 2, name: "Colorful Hoodie", price: 340, image: Hoodie },
+  { id: 3, name: "Kids Denim Jacket", price: 155, image: JacketKet },
+  { id: 4, name: "Comfy Shorts", price: 240, image: Shorts },
+  { id: 5, name: "Cute Skirt", price: 430, image: Skirt },
+  { id: 6, name: "Sports Shoes", price: 545, image: Shoes },
+   {
+    id: 1,
+    name: "Cartoon Print T-Shirt",
+    price: 225,
+    image: "https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=400",
+  },
+  
+  {
+    id: 4,
+    name: "Comfy Shorts",
+    price: 220,
+    image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400",
+  },
+  
+  {
+    id: 6,
+    name: "Kids Party Dress",
+    price: 465,
+    image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400",
+  },
+  
+  {
+    id: 9,
+    name: "Kids Jeans",
+    price: 148,
+    image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=400",
+  },
+  {
+    id: 10,
+    name: "Baby Romper",
+    price: 135,
+    image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=400",
+  },
+
 ];
 
 const Kids = () => {

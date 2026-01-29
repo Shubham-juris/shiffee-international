@@ -20,7 +20,6 @@ const Contact = () => {
 
       {/* Contact Form & Info */}
       <div className="max-w-6xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-12">
-        {/* Contact Form */}
         <motion.div
           className="bg-white p-8 rounded-xl shadow-md"
           initial={{ opacity: 0, x: -50 }}

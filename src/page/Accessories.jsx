@@ -44,8 +44,95 @@ const accessories = [
   {
     id: 6,
     name: "Necklace",
-    price: 55,
+    price: 555,
     image: Necklace,
+  },
+ {
+    id: 1,
+    name: "Wrist Watch",
+    price: 320,
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400",
+  },
+  {
+    id: 2,
+    name: "Sunglasses",
+    price: 80,
+    image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400",
+  },
+  {
+    id: 3,
+    name: "Sports shoes",
+    price: 660,
+    image: "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=400",
+  },
+
+  {
+    id: 6,
+    name: "Bracelet",
+    price: 35,
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",
+  },
+  {
+    id: 7,
+    name: "Necklace",
+    price: 110,
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400",
+  },
+  {
+    id: 8,
+    name: "Ring",
+    price: 70,
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400",
+  },
+  {
+    id: 11,
+    name: "Handbag",
+    price: 150,
+    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400",
+  },
+  {
+    id: 12,
+    name: "Backpack",
+    price: 580,
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400",
+  },
+  {
+    id: 13,
+    name: "Scarf",
+    price: 400,
+    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400",
+  },
+ 
+  {
+    id: 17,
+    name: "Tie",
+    price: 105,
+    image: "https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=400",
+  },
+  {
+    id: 20,
+    name: "Smart Watch",
+    price: 160,
+    image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400",
+  },
+  
+  {
+    id: 28,
+    name: "Shoulder Bag",
+    price: 170,
+    image: "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=400",
+  },
+  {
+    id: 29,
+    name: "Charm Bracelet",
+    price: 85,
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400",
+  },
+  {
+    id: 30,
+    name: "Luxury Watch",
+    price: 350,
+    image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=400",
   },
 ];
 
